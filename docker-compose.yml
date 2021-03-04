@@ -1,0 +1,17 @@
+version: "3.0"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: phoenix
+      POSTGRES_PASSWORD: nuirg9tf130721,
+      POSTGRES_DB: phoenix_ex
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  db-data:
+    driver: local
+
